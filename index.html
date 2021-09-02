@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<style>
+    html{
+        background-color: rgb(252, 247, 225);
+    }
+    .flex-content-space-between{
+        display:flex;
+        flex-direction: row;
+        align-content: space-around;
+        flex-wrap: wrap;
+    }
+    .flex-center-content-column{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .align-text-center{
+        text-align: center;
+    }
+    h1{
+        margin: 0 auto;
+        display:block;
+        color:black;
+        font-size: 40px;
+        font-family: serif;
+    }
+    .article-text{
+        font-size: 1rem;
+        line-height: 1.4;
+        text-align: justify;
+        margin:5vh;
+        margin: 20px 0;
+    }
+    .article-subheader{
+        font-size: 42px;
+        text-align: center;
+    }
+    .image-caption{
+        text-align: center;
+        font-family: 'Crimson Text', serif;
+        font-size: 25px;
+    }
+    #content{
+        background-color: rgb(252, 247, 225);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    #tribute-info{
+        max-width: 100%;
+    }
+    #image-top-benedict{
+        max-width: 1005 px;
+        width:50%;
+    }
+    #caption-image-top-benedict{
+        width:50%;
+        margin:0 0 0 0;
+    }
+    #image-young-della-chiesa{
+        max-width: 541px;
+        width: 80%;
+    }
+    #pictures-priesthood{
+        width: 100%;
+    }
+    #figure-image-PopeLeo_XIII{
+        margin: 0 auto;
+        width: min-content;
+    }
+    #figure-image-ordainer{
+        margin: 0 auto;
+        width: min-content;
+    }
+    #image-PopeLeo_XIII{
+        max-height: 579px;
+        height:30rem;
+    }
+    #image-ordainer{
+        max-height: 579px;
+        height:30rem;
+    }
+    #caption-image-PopeLeo_XIII{
+        width:100%;
+    }
+    #caption-image-ordainer{
+        width:100%;
+    }
+    #figure-image-portrait-rampolla{
+        width: 100%;
+    }
+    #image-portrait-rampolla{
+        width: 60%;
+    }
+    #caption-image-portrait-rampolla{
+        width: 60%;
+    }
+    #pictures-change-of-papacy-1903{
+        width:100%;
+        --height-of-images: 30rem;
+    }
+    #figure-image-pius-x{
+        margin: 0 auto;
+        width:min-content;
+    }
+    #figure-image-cardinal-del-val{
+        margin: 0 auto;
+        width:min-content;
+    }
+    #image-pius-x{
+        max-height: 800px;
+        height:var(--height-of-images);
+    }
+    #image-cardinal-del-val{
+        height:var(--height-of-images);
+        max-height: 800px;
+    }
+    #caption-image-pius-x{
+        width:100%;
+    }
+    #caption-image-cardinal-del-val{
+        width:100%;
+    }
+    #figure-image-consecration{
+        width:80%;
+    }
+    #image-consecration{
+        width:100%;
+    }
+    #pictures-old-rampolla-cardinal-Della-Chiesa{
+        width:100%;
+    }
+    #caption-image-consecration{
+        width:100%;
+    }
+    #figure-image-cardinal-Della-Chiesa{
+        margin: 0 auto;
+    }
+    #figure-image-old-Rampolla{
+        margin: 0 auto;
+        width:min-content;
+    }
+    #image-old-Rampolla{
+        max-height: 691px;
+        height:30rem;
+    }
+    #image-cardinal-Della-Chiesa{
+        max-height: 691px;
+        height:30rem;
+    }
+    #caption-image-old-Rampolla{
+        width:80%;
+    }
+    #pictures-habemus-papam{
+        width: 100%;
+    }
+    #figure-image-coronation{
+        width: 100%;
+        justify-content: center;
+    }
+    #figure-image-benedict-ordinary-dress{
+        width: 100%;
+    }
+    #image-coronation{
+        max-width: 1140px;
+        width: 100%;
+    }
+    #image-benedict-ordinary-dress{
+        max-width: 752px;
+        width: 80%;
+    }
+    #caption-image-coronation{
+        width:min-content;
+    }
+    #caption-image-benedict-ordinary-dress{
+        width:min-content;
+    }
+    #figure-image-gasmaks{
+        width:100%;
+    }
+    #image-gasmasks{
+        width:100%;
+        max-width: 800px;
+    }
+    #caption-image-gasmasks{
+        width:70%;
+        margin: 0 auto;
+    }
+    #images-leaders-of-dissolved-countries{
+        width:100%;
+    }
+    #images-leaders{
+        width:100%;
+    }
+    #figure-image-karl-I{
+        width:20rem;
+        margin: 0 auto;
+    }
+    #image-karl-I{
+        height:30rem;
+        max-height: 594px;
+    }
+    #caption-image-karl-I{
+        width:70%;
+    }
+    #figure-image-tsar{
+        width:min-content;
+        margin: 0 auto;
+        max-height: 594px;
+    }
+    #image-tsar{
+        height:30rem;
+    }
+    #caption-image-tsar{
+        width: 80%;
+    }
+    #figure-image-title-page-iuris-canonici{
+        width:100%;
+    }
+    #image-title-page-iuris-canonici{
+        width:70%;
+        max-width: 614px;
+    }
+    #last-pictues{
+        width:100%;
+    }
+    #images-memorial{
+        width:100%;
+    }
+    #figure-image-tomb{
+        margin:0 auto;
+        width: 100%;
+    }
+    #figure-image-statue{
+        margin:0 auto;
+        width: 100%;
+    }
+    #image-tomb{
+        max-width: 1536px;
+        width:100%;
+    }
+    #image-statue{
+        max-width:1200px;
+        width:100%;
+    }
+    #caption-image-statue{
+        width:70%;
+    }
+    #figure-image-benedict-XVI{
+        width:100%;
+    }
+    #image-benedict-XVI{
+        width:70%;
+        max-width: 777px;
+    }
+    #caption-image-benedict-XVI{
+        width:90%;
+    }
+    @media screen and (min-width:1200px) {
+        #pictures-habemus-papam{
+            width:min-content;
+            display:flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        #figure-image-benedict-ordinary-dress{
+            width:min-content;
+        }
+        #figure-image-cornation{
+            width:min-content;
+        }
+        #image-benedict-ordinary-dress{
+            height: 30rem;
+            width: auto;
+        }
+        #image-coronation{
+            height: 20rem;
+            width: auto;
+        }
+        #images-last{
+            width:140%;
+        }
+        .article-text{
+            font-size: 2rem;
+        }
+    }
+    #footer{
+        text-align: left;
+    }
+</style>
+<html>
+    <head>
+        <title>The Pope of Peace - Benedict XV</title>
+        <meta charset="UTF-8"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+    </head>
+
+    <body>
+        <h1 id="title" class="align-text-center">The Pope of Peace - Benedict XV</h1>
+        <div id="content" class="flex-center-content-column">
+            <figure id="figure-image-top-benedict" class="flex-center-content-column">
+                <img id="image-top-benedict" src="https://upload.wikimedia.org/wikipedia/commons/3/32/Benedictus_XV.jpg" alt="">
+                <figcaption id="caption-image-top-benedict" class="image-caption">Pope Benedict XV in 1915, wearing glasses, a stole, a zucchetto and a mozzeta.</figcaption>
+            </figure>
+            <div id="tribute-info" class="flex-center-content-column">
+                <h2 class="article-subheader"> Introduction </h2>
+                     <p class="article-text">
+                        His Holiness Benedict XV was one of the most influential figures during the Great War and the years that subsequently came after it. His work during one of the greatest military conflicts that the world has ever seen is sometimes forgotten even though it was so substantial. This page was made to pay tribute to him and his contribution to the world.
+                     </p>
+                <h2 class="article-subheader"> Early life</h2>
+                    <p class="article-text">
+                        Born Giacomo Paolo Giovanni Battista Della Chiesa on 21 November 1854 in Pegli (a suburb of Genoa, Italy) to Marchese Giuseppe della Chiesa and Marchesa Giovanna Migiloriati. Genealogical records suggest that his ancestors include Pope Callixtus II and Berengar II of Italy from his father's side and Pope Innocent VIII from his mother's side. He is also related to Bl. Antonio Della Chiesa, a Dominican superior. From his early years, he wanted to be a priest but his father opposed that idea and instead wanted his son to study law in order to become a lawyer.
+                    </p>
+                    <figure class="flex-center-content-column align-text-center">
+                        <img id="image-young-della-chiesa" src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Benedictxc1868.jpg" alt="">
+                        <figcaption class="image-caption">Young Giacomo Della Chiesa</figcaption>
+                    </figure>
+                    <p class="article-text">
+                        Giacomo obliged and on 2 of August 1875 he obtained a doctorate at the University of Genoa. Then he again asked his father whether he could become a priest. After receiving a reluctant approval, he was able to enter the seminary on the condition that he would go to Rome. This was done so that he wouldn't end up as a village priest. 
+                    </p>
+                <h2 class="article-subheader"> Priesthood</h2>
+                <p class="article-text">
+                    After the death of Pius IX, the new Pope Leo XIII received the students of the college Giacomo was in for a private audience. Then on 21 of December 1878 Cardinal Raffaele Monaco La Valletta ordained him a priest at the Lateran basilica. He continued his education by studying at the Pontificia Accademia dei Nobili Ecclesiastici for the next 3 years. As part of his education, on every Thursday, he was required to defend a research paper.
+                </p> 
+                <div id="pictures-priesthood" class="flex-content-space-between">
+                    <figure class="flex-center-content-column" id="figure-image-PopeLeo_XIII">
+                        <img id="image-PopeLeo_XIII" src="https://upload.wikimedia.org/wikipedia/commons/1/12/XIII.Leop%C3%A1pa1.jpg" alt="">
+                        <figcaption id="caption-image-PopeLeo_XIII" class="image-caption">The newly elected Pope Leo XIII</figcaption>
+                    </figure>
+                    <figure class="flex-center-content-column" id="figure-image-PopeLeo_XIII">
+                        <img id ="image-ordainer"src="https://upload.wikimedia.org/wikipedia/commons/7/75/Raffaele_Cardinal_Monaco_La_Valletta.jpg" alt="">
+                        <figcaption id="caption-image-ordainer" class="image-caption">Cardinal Raffaele Monaco La Valletta, ordainer of Della Chiesa</figcaption>
+                    </figure>
+                </div>
+                <p class="article-text">
+                    Guests at these events included high members of the Roman Curia and Cardinals. The invited Mariano Rampolla del Tindaro, then Secretary for Oriental Affairs of the Congregation for the Propagation of the Faith took note of Della Chiesa and in 1882 he helped Giacomo enter the diplomatic service of the Vatican. Rampolla was later appointed as the Apostolic Nuncio to Spain, Della Chiesa followed him as his secretary. It is believed that once the Mother of Giacomo said to Rampolla that her son is not recognized enough in the Vatican. Cardinal Mariano allegedly remarked on that by saying "Signora, your son will take only a few steps, but they will be gigantic ones." During the years spent together, Della Chiesa befriended his superior and treated him as a mentor.
+                </p>
+                <figure id="figure-image-portrait-rampolla" class="flex-center-content-column">
+                    <img id="image-portrait-rampolla" src="https://upload.wikimedia.org/wikipedia/commons/6/68/Laszlo_-_Cardinal_Mariano_Rampolla.jpg" alt="">
+                    <figcaption id="caption-image-portrait-rampolla" class="image-caption">His eminence Mariano Rampolla del Tindaro, in 1887 appointed Cardinal</figcaption>
+                </figure>
+                <h2 class="article-subheader">Change of the Papacy</h2>
+                <p class="article-text">
+                    After the death of Leo XII in 1903, the period of sede vacante began. Because the secretary of the College of Cardinals died at almost the same time as the Pope, a new one was needed as that position was tied with the position of the secretary of the Conclave. Rampolla strongly advocated for the candidacy of Giacomo but Cardinal Rafael Merry del Val was elected. This was treated as a sign showing that the papabile cardinal is actually not favored. Later a scandal broke out when a Polish cardinal, Jan Puzyna de Kosielsko, arrived with a document stating that the Emperor of Austria, Franz Joseph I, issued a veto for the candidacy of Mariano. Many of the electors said that they just ignored the veto but it might have been the final blow for the possibility of a papacy of Giacomo's mentor. The newly elected Pontiff, Pius X, issued a document banning any kind of external exclusives, under the penalty of automatic excommunication Latae sententiae for the cardinal that makes an exclusion apparent.
+                </p>
+                <div id="pictures-change-of-papacy-1903" class="flex-content-space-between">
+                    <figure id="figure-image-pius-x" class="flex-center-content-column">
+                        <img id="image-pius-x" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Portrait_of_Pope_St._Pius_X_%28Colored%29.jpg" alt="">
+                        <figcaption id="caption-image-pius-x" class="image-caption">Pope Saint Pius X - beatified and canonized by Pius XII</figcaption>
+                    </figure>
+                    <figure id="figure-image-cardinal-del-val" class="flex-center-content-column">
+                        <img id="image-cardinal-del-val" src="https://upload.wikimedia.org/wikipedia/commons/0/07/Cardinal_Rafael_Merry_del_Val.jpg" alt="">
+                        <figcaption id="caption-image-cardinal-del-val" class="image-caption">Servant of God Cardinal Rafael Merry del Val</figcaption>
+                    </figure>
+                </div>
+
+
+                <h2 class="article-subheader">New duties</h2>
+                <p class="article-text">
+                    The new papal situation made the position of Della Chiesa in the Secretariat of State somewhat uneasy because of the strong association with Rampolla. The newspapers announced that he would be made the papal nuncio in Madrid but Pius X commented on that by saying "Unfortunately, the paper forgot to mention whom I nominated as the next Archbishop of Bologna."
+                </p>
+                    <figure id="figure-consecration" class="align-text-center">
+                        <img id="image-consecration"src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PiusXbenedict_XV.jpg" alt="">
+                        <figcaption id="caption-image-consecration" class="image-caption">Consecration of Della Chiesa as a Bishop of Bologna by Pius X</figcaption>
+                    </figure>
+                <p class="article-text">
+                    On 18 of December 1907, Giacomo was consecrated by the Pope himself in the presence of his family, many bishops, and cardinals including his long-time friend Rampolla. The Pontiff gifted him both an episcopal ring and crosier, which he himself used and spent the following day with the new bishop and his family. Della Chiesa was an active pastor in his diocese. He visited all of the parishes, even those that were placed in secluded places where one could only enter using a horse. He preached and gave sermons, usually 2 during his visit, and organized pilgrimages to places like Lourdes or Loreto. It was a custom that if the newly appointed bishop of Bologna was not a cardinal he would be created one on a consistory held in the future. The Pontiff didn’t follow that tradition until 1914. Many hold that this was due to the already strong position of Mariano within the college of the “princes of the Church '' which many didn't want to make any stronger by introducing his ex-secretary to the group. Then a truly saddening message came to the Archbishop when on 16 December 1913 Rampolla died at the age of 70. Della Chiesa presided over the funeral ceremonies of his friend, mentor and long-time supporter. Half a year later on May 25th 1914, Giacomo was finally created Cardinal.
+                </p>
+                    <div id="pictures-old-rampolla-cardinal-Della-Chiesa" class="flex-content-space-between">
+                        <figure id="figure-image-old-Rampolla" class="flex-center-content-column">
+                            <img id="image-old-Rampolla" src="https://upload.wikimedia.org/wikipedia/en/d/d8/Rampolla_1913.jpg" alt="">
+                            <figcaption id="caption-image-old-Rampolla" class="image-caption">Cardinal Rampolla shortly before his death</figcaption>
+                        </figure>
+                        <figure id="figure-image-cardinal-Della-Chiesa" class="flex-center-content-column">
+                            <img id="image-cardinal-Della-Chiesa"src="https://upload.wikimedia.org/wikipedia/commons/1/13/Pope_Benedictus_XV.jpg" alt="">
+                            <figcaption id="caption-image-cardinal-Della-Chiesa" class="image-caption">Cardinal Giacomo Della Chiesa</figcaption>
+                        </figure>
+                </div>
+                <h2 class="article-subheader">"The suicide of Europe" and another "Habemus Papam"</h2>
+                <p class="article-text">
+                    About 11 years after the exclusive during the Papal Conclave of 1903 that fell on the late Cardinal, the same Austrian Emperor, on 28 of July 1914 declared war which started to escalate to a conflict no one had before seen. Pius X died on the 20 of August 1914 AD, after a fruitful pontificate, whilst observing how the old world was about to drastically change. As the conclave of 1914 began, the need for a new Pontiff with diplomatic skills and experience was obvious. This made Della Chiesa the ideal choice. The white smoke rose from the chimney of the Sistine Chapel and the dean of the college of Cardinals announced the election of Benedict XV. The task of governing the Church from the seat of Peter was daunting in the time of peace and now with the war, it was an unimaginably enormous responsibility. He was a young Pope especially for today's standards as he was only 59 years old.
+                </p>
+                <div id="pictures-habemus-papam" class="flex-content-space-between">
+                    <figure id="figure-image-coronation" class="flex-center-content-column">
+                        <img id="image-coronation"src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Bene15coronation1914.jpg" alt="">
+                        <figcaption class="image-caption">Coronation of Benedict XV</figcaption>
+                    </figure>
+                    <figure id="figure-image-benedict-ordinary-dress" class="flex-center-content-column">
+                        <img id="image-benedict-ordinary-dress" src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Pope_Benedict_XV_%28LOC%29.jpg" alt="">
+                        <figcaption class="image-caption">His holiness in ordinary dress</figcaption>
+                    </figure>
+                </div>
+                <h2 class="article-subheader">A voice for peace in times of madness</h2>
+                <p class="article-text">
+                    In his first encyclical, he pleaded for all hostility to end. Then in late 1914 he asked for a truce during Christmas but it was ignored. The Pontiff did everything he could to negotiate peace and help those who were in need. He declared several times that the Vatican was neutral and did not support either side. These declarations however were regarded as false by both sides as each believed the Pope was against them. He had a bit more support from the allies because France, Italy and Belgium were mostly Catholic and the papacy was on good terms with the British Empire. German protestants said they rejected any kind of "Papal peace", whilst French politician, Georges Clemenceau, who was a tireless anti-clerical declared that the Vatican is anti-french. Even among Catholics the Pope wasn't always viewed as a sympathetic figure because populations, emotionally invested in the war, didn't want to accept anything other than a "total victory".<br>
+                    In 1917 on 1 of August, the Pontiff released a plan containing seven points:
+                </p>
+                <ol class="article-text">
+                    <li>"the moral force of right… be substituted for the material force of arms,"</li>
+                    <li>there must be "simultaneous and reciprocal diminution of armaments,"</li>
+                    <li>a mechanism for "international arbitration must be established,"</li>
+                    <li>"true liberty and common rights over the sea" should exist,</li>
+                    <li>there should be a "renunciation of war indemnities,"</li>
+                    <li>occupied territories should be evacuated, and</li>
+                    <li>there should be "an examination… of rival claims."</li>
+                </ol>
+                <p class="article-text">
+                    The popular opinion was mixed but most countries either rejected the plan or remained inactive. Parts of the plan were included however in the famous fourteen points declaration made by Woodrow Wilson. Even though the Pope was not successful with his efforts in ending the war, his actions increased the prestige of the Papacy for years to come.
+                </p>
+                <h2 class="article-subheader">Ending misery with diplomacy</h2>
+                <p class="article-text">
+                    During the war efforts made by both sides, there were many prisoners of war taken. In November of 1914, less than six months after his reign began, Benedict XV was able to negotiate an exchange of captured soldiers who were unable to continue fighting. Tens of thousands of POWs were sent home. Another success came when in 1915 both sides of the conflict, with the help of the Pope, agreed not to let POWs work on Sundays and holidays. This also prevented some death sentences along with an exchange of hostages and corpses. A large concern for the Pope was the fate of the children. In 1916 he asked the people and clergy of the United States for aid in feeding children starving under the occupation of Germany in Belgium. Benedict also helped the youth in Poland, Lithuania, Russia, Lebanon, Montenegro and Syria. The introduction of aerial warfare was especially horrifying for the Holy Father and several times he pleaded for it's abolition. The Vatican severely condemned the Armenian Genocide of Christian minorities in Anatolia which was carried out by the Ottoman Empire in May and June 1915. The Pontiff sent a personal letter to the Sultan who at the time was the Caliph of Islam, to no avail. Rome also tried to get the attention of Germany and Austria-Hungary which were allied with the Ottomans but this was ignored. Over a million Armenians died, either killed outright by the Turks or from maltreatment or starvation. As a result of the actions of the Pope, another transfer occurred, this time of 20 thousand civilians from occupied zones in the span of one month. The same year, he was able to make it possible that 29 thousand prisoners, badly affected by the gas attacks, were sent into Switzerland. In the last months of the Great War, in May 1918, the Pontiff mediated in an agreement where both sides would send to Switzerland prisoners that had been kept captive for at least 18 months and had four or more children.
+                </p>
+                <figure id="figure-image-gasmasks" class="align-text-center">
+                    <img id="image-gasmasks"src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Various_gas_masks_WWI.jpg/800px-Various_gas_masks_WWI.jpg" alt="">
+                    <figcaption id="caption-image-gasmasks" class="image-caption">Various gas masks used during WWI as means of defending against the gas attacks</figcaption>
+                </figure>
+                <h2 class="article-subheader">The war ended but not the problems</h2>
+                <p class="article-text">
+                    With the end of the Great War many social and political problems ended but not all. Benedict XV was excluded from the Paris Peace Conference. The Pontiff condemned the economic situation imposed by the allies on Germany. He called it too harsh and threatening to the stability of the economy as a whole. His administration also opposed the dissolution of Austria-Hungary because it was seen as a help in the strengthening of Germany, foreseeing what was about to come in the future. The Pontiff disapproved of the League of Nations because it was built on secular and not Christian values. This however came with a simultaneous condemnation of extremist nationalism which was on the rise in the 1920s. His goal was a unification under "peace, a beautiful gift of God" as he stated in his encyclical Pacem, Dei Munus Pulcherrimum. The revolt made by the communists in Russia was disturbing in the eyes of the Pope, especially its atheistic and anti-religious character. This did not stop him however, from helping financially with the famine in the Soviet Union by donating millions.
+                </p>
+                <div id="images-leaders-of-dissolved-countries" class="flex-center-content-column align-text-center">
+                    <p class="image-caption">Two leaders of countries dissolved as a result of the Great War:</p>
+                    <div class="flex-content-space-between" id="images-leaders">
+                        <figure id="figure-image-karl-I" class="flex-center-content-column">
+                            <img id="image-karl-I" src="https://upload.wikimedia.org/wikipedia/commons/7/70/Emperor_karl_of_austria-hungary_1917.png" alt="">
+                            <figcaption class="image-caption">Blessed Karl I Habsburg, last monarch of Austria-Hungary</figcaption>
+                        </figure>
+                        <figure id="figure-image-tsar" class="flex-center-content-column">
+                            <img id="image-tsar" src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Nicholas_II_of_Russia.jpeg" alt="">
+                            <figcaption id="caption-image-tsar" class="image-caption">The last Tsar of Russia, Nicholas II - murdered by the Bolsheviks</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <h2 class="article-subheader">Personal life - Generous and determined</h2>
+                <p class="article-text">
+                    During the war, Benedict XV, as the spiritual leader of the Catholic Church, placed the world under the protection of Blessed Virgin Mary. He also continued the work of his predecessor and in 1917 promulgated the first codified and unified code of Canon Law, which is now remembered as the Pio-Benedictine Code. He was famous for his generosity and this led to financial problems of the Vatican as it was running out of money. During these hard times, some prelates would instruct those admitted for audiences to not talk about financial problems. This was done because Benedict would immediately feel guilty after hearing about someone's needs and even though money was scarce, he would try to help financially. He was also regarded as a careful innovator. First, a careful examination and consideration of any novelty was made. If he would implement  something new, it would be done to the greatest extent, within the confines of reason. He wasn't trying to forcefully stay in the past and he summed up his attitude with the words: "Let us live in the present and not in history." Although dignified and elegant in his manners, nature didn't bless him with the physique of great men. He was quite short, had black mat hair and prominent teeth. He noted on his appearance as an "ugly gargoyle upon the buildings of Rome".
+                </p>
+                <figure id="figure-image-title-page-iuris-canonici" class="flex-center-content-column align-text-center" >
+                    <img id="image-title-page-iuris-canonici"src="https://upload.wikimedia.org/wikipedia/commons/a/a5/1917_Codex_Iuris_Canonici_%281918_ed.%29_%28page_10_crop%29.jpg" alt="">
+                    <figcaption class="image-caption">The title page of the 1917 Code of Canon Law</figcaption>
+                </figure>
+                <h2 class="article-subheader">Death and legacy</h2>
+                <p class="article-text">
+                    After celebrating Mass at the Domus Sanctae Marthae in early January 1922, he was waiting for his driver and due to the cold weather and rain, he caught a bad case of flu. Later it developed into pneumonia. On the 5th of January, he showed signs that he is suffering from a cold and on the 12th of January he started having a heavy cough and fevers. Six days later the Pontiff wasn't able to get out of his bed. The next day his deteriorating condition worsened with the spread of pneumonia and weakening of his heart. Oxygen was given to the Pope, now in grave condition. On the 20th of January, his state slightly improved. On the next day, Benedict was given the Extreme Unction. Later, he met privately with Cardinal Gasparri for 20 minutes to entrust his will and last wishes to the then secretary of State. Afterwards, the Pontiff was in a state of delirium, his speech was becoming incoherent sometimes and he was falling in and out of a coma. Finally on the 22 of January 1922 at 6:00 am, the Vicar of Christ, Giacomo Della Chiesa, departed to meet with our Lord. He reached the age of 67 years with a pontificate of only 7 years, 4 months and 19 days. After the funeral, his body was buried in the Vatican grottoes. Pope Pius XII, created cardinal by Benedict XV, described him as a true Marian Pope, a man of God, who worked for peace, helping those in need. The Pontiff also praised his predecessor for the extreme generosity, especially to Russia. Almost eighty-three years after the death of Della Chiesa, Cardinal Ratzinger was elected Pope. The German Cardinal in honor of his wise, diplomatic, and prophetic predecessor chose the name, Benedict XVI.
+                </p>
+                <div id="pictures-last" class="flex-center-content-column ">
+                    <div id="images-memorial" class="flex-center-content-column">
+                        <figure id="figure-image-tomb">
+                            <img id="image-tomb" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Grotto_9.JPG" alt="">
+                            <figcaption id="caption-image-tomb" class="image-caption">The tomb of Benedict XVI</figcaption>
+                        </figure>
+                        <figure id="figure-image-statue" class="flex-center-content-column">
+                            <img id="image-statue"src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Monument_to_Benedictus_XV_in_Saint_Peter%27s_Basilica.jpg" alt="">
+                            <figcaption id="caption-image-statue" class="image-caption">A statue of the Pontiff depicting him in prayer as he kneels on a grave of a soldier</figcaption>
+                        </figure>
+                    </div>
+                <figure id="figure-image-benedict-XVI" class="flex-center-content-column">
+                    <img id="image-benedict-XVI" src="https://upload.wikimedia.org/wikipedia/commons/9/96/Benedykt_xvi-crop.jpg" alt="">
+                    <figcaption class="image-caption">His holiness Benedict XVI, who in honour of his predecessor chose the same name.</figcaption>
+                </figure>
+                <p class="align-text-center article-subheader">If you want to learn more about Benedict XV, go to <a id="tribute-link" target="_blank" href="https://en.wikipedia.org/wiki/Pope_Benedict_XV">the wikipedia page dedicated to him</a> </p>
+                </div>
+            </div>
+        </div>
+        <footer id="footer" class="article-text">Made by Palgorithm in August and September Anno Domini 2021, source of information: <a target="_blank" href="https://en.wikipedia.org/">Wikipedia</a></footer>
+    </body>
+</html>
